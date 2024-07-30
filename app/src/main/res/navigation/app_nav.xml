@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/app_nav"
+    app:startDestination="@id/splashFragment">
+    <fragment
+        android:id="@+id/splashFragment"
+        android:name="com.example.navigationexample.SplashFragment"
+        android:label="fragment_splash"
+        tools:layout="@layout/fragment_splash" >
+        <action
+            android:id="@+id/navigateToWithoutArgsFragment"
+            app:destination="@id/withoutArgsFragment" />
+        <action
+            android:id="@+id/navigateToArgsFragment"
+            app:destination="@id/argsFragment" />
+        <action
+            android:id="@+id/navigateToBundleFragment"
+            app:destination="@id/bundleFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/withoutArgsFragment"
+        android:name="com.example.navigationexample.WithoutArgsFragment"
+        android:label="fragment_without_args"
+        tools:layout="@layout/fragment_without_args" />
+    <fragment
+        android:id="@+id/argsFragment"
+        android:name="com.example.navigationexample.ArgsFragment"
+        android:label="fragment_args"
+        tools:layout="@layout/fragment_args" >
+        <argument
+            android:name="name"
+            app:argType="string" />
+        <argument
+            android:name="counter"
+            app:argType="integer" />
+    </fragment>
+    <fragment
+        android:id="@+id/bundleFragment"
+        android:name="com.example.navigationexample.BundleFragment"
+        android:label="fragment_bundle"
+        tools:layout="@layout/fragment_bundle" />
+</navigation>
